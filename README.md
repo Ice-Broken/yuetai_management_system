@@ -1,5 +1,5 @@
 
-# 悦泰管理系统
+# crm管理系统
 ## 项目启动
 
 **因为使用到 node-sass 的缘故，为了对应 node 版本，node 版本请使用 16**
@@ -24,4 +24,17 @@
 ## 介绍
 技术为 Vue3.0+Node.js(Express)+Mysql，组件库使用 Element-plus 组件库
 
-
+### 数据库
+`admin`, 
+`apply`, 
+`bbuyer_activity`, 
+`chamber_activity`, 
+`isshow`, 
+`message`,
+`prod_activity`, 
+`prod_bbuyer`, 
+`prod_buyer`, 
+`prod_chamber`, 
+`prod_requirement`, 
+`student`, 
+`time`
