@@ -1,16 +1,16 @@
 <template>
   <el-table :data="tableData" style="width: 100%">
-    <el-table-column label="标题" width="180">
+    <el-table-column label="标题" width="350" text-align="center" show-overflow-tooltip>
       <template v-slot="scope">
-        <div class="title">{{ scope.row.title }}</div>
+        {{ scope.row.title }}
       </template>
     </el-table-column>
-    <el-table-column label="内容" width="180">
+    <el-table-column label="内容" width="500" text-align="center" show-overflow-tooltip>
       <template v-slot="scope">
-        <div class="title">{{ scope.row.text }}</div>
+        {{ scope.row.text }}
       </template>
     </el-table-column>
-    <el-table-column label="发布时间">
+    <el-table-column label="发布时间" width="250" text-align="center">
       <template v-slot="scope">
         {{ scope.row.time }}
       </template>
