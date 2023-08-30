@@ -1,5 +1,8 @@
 <template>
   <el-form label-width="70px">
+    <el-form-item label="负责人">
+      <el-input type="text" v-model="name" placeholder="请填写 您的姓名"></el-input>
+    </el-form-item>
     <el-form-item label="采购商">
       <el-input type="text" v-model="company_name_ch" placeholder="请填写 采购商中文名"></el-input>
       <el-input type="text" v-model="company_name_en" placeholder="请填写 采购商英文名"></el-input>
@@ -34,6 +37,7 @@ let source = ref("");
 let contact_name = ref("");
 let position = ref("");
 let tel = ref("");
+let name = ref("");
 let email = ref("");
 let remark = ref("");
 let subject = ref("其他");
@@ -64,6 +68,7 @@ function create() {
   let isCreate = nullTest.test(company_name_ch.value);
   if (isCreate) {
     createBuyer({
+      name: name.value,
       company_name_ch: company_name_ch.value,
       company_name_en: company_name_en.value,
       subject: subject.value,

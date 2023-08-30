@@ -11,10 +11,12 @@
     </el-input>
     <el-button icon="el-icon-search" @click="search" class="search-btn" circle v-if="isAdmin"></el-button>
     &nbsp;&nbsp;&nbsp;&nbsp; 
-    <el-button type="success" icon="el-icon-upload" @click="upload"> 导入excel </el-button>
+    <!-- <el-button type="success" icon="el-icon-upload" @click="upload"> 导入excel </el-button> -->
     &nbsp;&nbsp;&nbsp;
     <el-button type="primary" icon="el-icon-plus" @click="add"> 新增采购商 </el-button>
     <el-table :data="tableData" style="width:100%" :default-sort="{ prop: 'time', order: 'descending' }">
+        <el-table-column prop="name" label="负责人" width="120" text-align="center" show-overflow-tooltip>
+        </el-table-column>
         <el-table-column prop="company_name_ch" label="公司中文名称" width="130" text-align="center" show-overflow-tooltip>
         </el-table-column>
         <el-table-column prop="company_name_en" label="公司英文名称" width="150" text-align="center" show-overflow-tooltip>

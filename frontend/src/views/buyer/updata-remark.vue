@@ -1,7 +1,7 @@
 <template>
   <el-form label-width="100px">
     <el-form-item label="公司名称">
-      <el-input type="text" v-model="route.query.id" :disabled="true"></el-input>
+      <el-input type="text" v-model="company_name_ch" :disabled="true"></el-input>
     </el-form-item>
     <el-form-item label="备注">
       <el-input type="textarea" v-model="remark" placeholder="填写新的备注" :disabled="isStudent"></el-input>
@@ -18,6 +18,7 @@ import readUser from "@/modules/common/read-user";
 let route = useRoute();
 let isStudent = ref(localStorage.id == "student");
 let company_name_en = ref("");
+let company_name_ch = ref("");
 let remark = ref("");
 let id = ref("");
 
@@ -26,6 +27,7 @@ readUser({
   id: route.query.id,
 }).then((res) => {
   let data = res.res[0];
+  company_name_ch.value = data.company_name_ch;
   company_name_en.value = data.company_name_en;
   remark.value = data.remark;
 });

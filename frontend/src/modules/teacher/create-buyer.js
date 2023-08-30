@@ -16,6 +16,7 @@ async function createBuyer(getData) {
       tel: getData.tel,
       email: getData.email,
       remark: getData.remark,
+      name: getData.name,
     },
   }).then(res => {
     data = res.data;

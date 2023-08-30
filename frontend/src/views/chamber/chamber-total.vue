@@ -18,7 +18,7 @@
         <el-table-column prop="tel" label="联系人电话" width="130" text-align="center" show-overflow-tooltip> </el-table-column>
         <el-table-column prop="email" label="联系人电邮" width="130" text-align="center" show-overflow-tooltip>
         </el-table-column>
-        <el-table-column prop="time" label="最后联系时间" width="150" text-align="center" show-overflow-tooltip>
+        <el-table-column prop="time" label="最后联系时间" width="150" text-align="center" show-overflow-tooltip sortable>
         </el-table-column>
         <el-table-column prop="remark" label="跟进情况" width="150" text-align="center">
             <template v-slot="scope">
